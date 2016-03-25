@@ -7,6 +7,20 @@
 	<link rel="stylesheet" type="text/css" href="public/css/base.css" />
 </head>
 <body>
-	<h3>Hello World!</h3>
+	<div id="app">
+		{{ message }}
+	</div>
+	<!-- 开发版本(包含完整的警告和调试模式) -->
+	<script type="text/javascript" src="public/js/vue.js"></script>
+	<!-- 生产版本(删除了警告) -->
+	<!-- <script type="text/javascript" src="public/js/vue.min.js"></script> -->
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',
+			data: {
+				message: 'Hello Vue.js!'
+			}
+		});
+	</script>
 </body>
 </html>

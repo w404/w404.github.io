@@ -5,33 +5,33 @@
 */
 
 // Skel.
-	skel.init({
-		reset: 'full',
-		breakpoints: {
-			'global': { range: '*', href: 'public/css/style.css', lockViewport: true, viewport: 'minimal-ui' },
-			'wide': { range: '-1680', href: 'public/css/style-wide.css' },
-			'normal': { range: '-1280', href: 'public/css/style-normal.css' },
-			'mobile': { range: '-640', href: 'public/css/style-mobile.css' },
-			'mobilep': { range: '-360', href: 'public/css/style-mobilep.css' }
-		}
-	});
+skel.init({
+    reset: 'full',
+    breakpoints: {
+        'global': { range: '*', href: 'public/css/style.css', lockViewport: true, viewport: 'minimal-ui' },
+        'wide': { range: '-1680', href: 'public/css/style-wide.css' },
+        'normal': { range: '-1280', href: 'public/css/style-normal.css' },
+        'mobile': { range: '-640', href: 'public/css/style-mobile.css' },
+        'mobilep': { range: '-360', href: 'public/css/style-mobilep.css' }
+    }
+});
 
 // Events (JS).
-	
-	// Remove "loading" class once the page has fully loaded.
-		window.onload = function() {
-			document.body.className = '';
-		}
 
-	// Prevent scrolling on touch.
-		window.ontouchmove = function() {
-			return false;
-		}
+// Remove "loading" class once the page has fully loaded.
+window.onload = function() {
+    document.body.className = '';
+}
 
-	// Fix scroll position on orientation change.
-		window.onorientationchange = function() {
-			document.body.scrollTop = 0;
-		}
+// Prevent scrolling on touch.
+window.ontouchmove = function() {
+    return false;
+}
+
+// Fix scroll position on orientation change.
+window.onorientationchange = function() {
+    document.body.scrollTop = 0;
+}
 
 /*
 

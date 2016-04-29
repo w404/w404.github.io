@@ -35,88 +35,22 @@
         <pre>&lt;img src="" alt="图片描述" title="图片描述"&gt;</pre>
       	<h3>8、在页面head标签中引入所有的样式表文件和在页面底部引入javascript文件</h3>
       	<h3>9、不要使用嵌入式CSS样式和javaScript</h3>
-        <pre>尽量不要在html写css样式和javaScript
-      	</pre>
-      	<h3>4、使用小写的标记</h3>
-        <pre>
-          正确写法&lt;div&gt;闭合标签&lt;/div&gt;
-          错误写法&lt;DIV&gt;闭合标签&lt;/DIV&gt;
-      	</pre>
-        <h3>3、一定要闭合HTML标签</h3>
-        <pre>
-          正确写法&lt;div&gt;闭合标签&lt;/div&gt;
-          错误写法&lt;div&gt;非闭合标签
-      	</pre>
-        <h3>2、多媒体后备：为多媒体提供备选内容</h3>
-        <pre>
-          典型就是为img添加alt内容。
-      	</pre>
-
-        <h3>3、语义性(适用范围：支持语义标签场景)</h3>
-        <pre>
-        对于HTML5而言，例如header、footer、nav、section等
-        跟div能实现的功能基本类似，但是语义性上有着天壤之别。
-      	</pre>
-        <h3>4、TODO待定项</h3>
-        <pre>
-        尚未实现的或待定的内容一定要标识强调出来，利用TODO辨识，而非其他诸如@@来强调。
-        在todo项中如果有必要列明联系人，比如负责人。在TODO后追加一个冒号作为行动内容，
-        例 如 TODO:增加HTML5模板
-      	</pre>
-        <h3>6、创建或编辑裸仓库post-receive，实现第5步</h3>
-        <pre>
-        #!/bin/sh
-
-        #git 的钩子在运转的时分会调用 GIT_DIR 这个环境变量
-        #若缺少会报错：remote: fatal: Not a git repository: ‘.’
-        unset $(git rev-parse --local-env-vars)
-
-        #此文件夹保存自动获取的代码（测试站点资源路径）
-        devPath=XXXX
-
-        #获取提交的信息 旧版本 新版版 分支名称
-        while read oldrev newrev refname
-        do  
-            branch=$(git rev-parse --symbolic --abbrev-ref $refname)
-            #if [ "master" == "$branch" ]; then
-            #  echo current branch $branch
-            #fi
-        done 
-
-        echo "\033[32m current branch $branch \033[0m"
-
-        #自动拉取提交的代码 
-        cd $devPath
-        if [ "master" == "$branch" ]; then
-            git checkout master
-            git pull origin master
-            echo "\033[32m pull branch master done... \033[0m"
-        fi
-
-        #如果不是master分支（开发分支）则迁出分支
-        if [ "master" != "$branch" ]; then
-            git checkout $branch
-            git pull origin $branch
-            echo "\033[32m pull branch $branch done... \033[0m"
-        fi
-
-        gulp clean
-        echo "\033[32m clean old files done... \033[0m"
-        gulp
-        echo "\033[32m gulp branch $branch done... \033[0m"
-
-        # 设置node环境为生产环境 并重启测试站点
-        NODE_ENV=production 
-        forever restartall
-        echo "\033[32m restart website done... \033[0m"
-
-        #退出
-        exit 0
-      </pre>
-        <h3>7、为钩子文件post-receive添加可执行权限 很重要</h3>
-        <pre>
-        chmod +x post-receive
-      </pre>
+        <pre>尽量不要在html写css样式和javaScript</pre>
+      	<h3>10、使用小写的标记</h3>
+        <pre>正确写法&lt;div&gt;闭合标签&lt;/div&gt;<br/>错误写法&lt;DIV&gt;闭合标签&lt;/DIV&gt;</pre>
+        <h3>11、一定要闭合HTML标签</h3>
+        <pre>正确写法&lt;div&gt;闭合标签&lt;/div&gt;<br/>错误写法&lt;div&gt;非闭合标签</pre>
+        <h3>12、语义性(适用范围：支持语义标签场景)</h3>
+        <pre>对于HTML5而言，例如header、footer、nav、section等跟div能实现的功能基本类似，但是语义性上有着天壤之别。</pre>
+        <h3>13、使用H1 – H6标签</h3>
+        <pre>在网页中使用其中全部六种标记，虽然大部分人只会用到前四个，但使用最多的H会有很多好处，比如设备友好、搜索引擎友好<br/>等，但一个页面中保持只出现一个h1和h2，其他类型可以多个</pre>
+        <h3>14、TODO待定项</h3>
+        <pre>尚未实现的或待定的内容一定要标识强调出来，利用TODO辨识，而非其他诸如@@来强调。在todo项中如果有必要列明联系人，<br/>比如负责人。在TODO后追加一个冒号作为行动内容，例 如 TODO:增加HTML5模板</pre>
+        <h3>15、代码的规范性验证(处女座专属)</h3>
+        <pre>修改完一个页面后，浏览器中复制页面源代码，访问http://validator.w3.org/check，在里面进行检测并逐项改正。</pre>
+        <h3>16、用div等标签布局；表格型数据，table首选。</h3>
+        <h3>17、代码风格采用树形结构，提高可读性；避免冗余嵌套。</h3>
+        <h3>18、模块之间必须保持独立，区块化布局，方便随意增删改，多人协作维护。</h3>
     </section>
 </body>
 

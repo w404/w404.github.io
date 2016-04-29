@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" media="screen">
+    <link rel='stylesheet' type='text/css' href='../css/fonts.css'>
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/github-light.css" media="screen">
+</head>
+
+<body>
+    <section class="main-content">
+        <h1>chrome插件编写之新版hello world</h1>
+        <p>在chrome中编写插件和写网页应用基本一致，采用的是javascript+css+html的方式</p>
+        <h3>一、chrome插件和用户的几种交互方式</h3>
+        <p>1、browser action:即在浏览器的右上角有一个新增的显示插件图标的按钮，用户点击该按钮即可以触发插件的应用逻辑。</p>
+        <p>2.backgroud javascript:这种情况下插件没有对应的图标和按钮，在chrome启动时，插件运行在自己的单独的背景线程中。与用户的交互方式通常是在某些相关网页加载完之后，通过javascript对该网页进行修改，将插件逻辑嵌入到页面html代码中。</p>
+        <p>3.page action:这种插件形式在需要时在浏览器地址栏中弹出一个图标。</p>
+        <h3>二、通过browser action实现hello world</h3>
+        <p><strong>2.1 程序的目录结构</strong></p>
+        <p> 先来看看hello world插件的目录结构，其中icon.png用于图标的显示,manifest.json是chrome 插件的基本配置文件，popup.html用于下拉菜单的构建，popup.js是和popup.html对应的js文件。</p>
+        <p><strong>2.2 manifest.json文件</strong></p>
+        <pre>
+            {
+                "manifest_version": 2,
+                "name": "hello-world",
+                "description": "chrome extension-browser action",
+                "version": "1.0",
+                "permissions": [
+                    "https://*/*",
+                    "http://*/*"
+                ],
+                "browser_action": {
+                    "default_icon": "icon.png",
+                    "default_popup": "popup.html"
+                }
+            }
+          </pre>
+        <p>manifest.json是chrome插件的配置文件，其基本内容如上所示。"manifest_version"字段默认设置为2。permissions字段设置了插件的基本权限，即具有访问所有http链接的权限。browser_action字段中default_icon和default_popup分别和之前的icon.png，popup.html文件相对应。</p>
+        <p><strong>2.3 popup.html(用于下拉菜单的构建)</strong></p>
+        <p> popup.html中有个h2的标签，其中h2标签中原有的内容是"Hello World!"。在popup.js中通过代码将标签1的内容修改为了"您好，世界！".</p>
+        <p><strong>2.4 popup.js(用于下拉菜单的交互)</strong></p>
+        <pre>
+            document.getElementById("hw").innerHTML="您好，世界！";
+        </pre>
+        <p><strong>2.5 将插件安装到chrome浏览器中</strong></p>
+        <p>2.5.1进入extension页面扩展程序</p>
+        <p>2.5.2勾选开发者模式</p>
+        <p>2.5.3将包含源码的目录直接拖入extension页面，完成安装。点击重新加载可以更新。</p>
+        <p>2.5.4运行，并看到了popup.html页面的正确显示且被popup.js所修改</p>
+        <h3>三、通过backgroud javascript实现hello world！</h3>
+        <p>目标：打开https://www.baidu.com/时，弹出hello world的提示框</p>
+        <p><strong>3.1目录结构</strong></p>
+        <p>manifest.json是chrome 插件的基本配置文件，bg.js用于交互。</p>
+        <p><strong>3.2manifest.json文件</strong></p>
+        <pre>
+            {
+                "manifest_version": 2, //chrome18以后默认显式的为2
+                "name": "hello world",
+                "description": "backgroud javascript",
+                "version": "1.0.0",
+                "permissions": [
+                    "tabs",
+                    "https://*/*",
+                    "http://*/*"
+                ],
+                "background": {
+                    "scripts": ["bg.js"],
+                    "persistent": false
+                }
+            }
+        </pre>
+        <p>permission字段中，新增“tabs”属性，后面需要通过tab来获得当前页面的url。background字段中指明了需要在后台运行的bg.js</p>
+        <p><strong>3.3 bg.js</strong></p>
+        <p>bg.js中注册了tabs的监听器，在当前页面加载完整之后检查当前页面链接是否是https://www.baidu.com/，并执行相应操作。</p>
+        <p><strong>3.4 执行后的效果</strong></p>
+        <h3>四、通过page action实现hello world！</h3>
+        <p>目标访问https://www.baidu.com/，在地址栏的右侧出现page action的图标，点击弹出html页面</p>
+        <p><strong>4.1目录结构</strong></p>
+        <p>bg.js, manifest.json, icon.png, popup.html, popup.js</p>
+        <p><strong>4.2manifest.json</strong></p>
+        <pre>
+            {
+                "manifest_version": 2, //chrome18以后默认显式的为2
+                "name": "hello world",
+                "description": "page action",
+                "version": "1.0.0",
+                "permissions": [
+                    "tabs",
+                    "https://*/*",
+                    "http://*/*"
+                ],
+                "background": {
+                    "scripts": ["bg.js"],
+                    "persistent": false
+                },
+                "page_action": {
+                    "default_name": "Hello world",
+                    "default_icon": "icon.png",
+                    "default_popup": "popup.html"
+                }
+            }
+        </pre>
+        <p>新增了page_action字段，指定了page action的图标和下拉html。</p>
+        <p><strong>4.3 bg.js</strong></p>
+        <p>page action默认不做显示，当页面url=="https://www.baidu.com/",通过api chrome.pageAction.show显示page action</p>
+        <p><strong>4.5 访问https://www.baidu.com/,查看运行效果</strong></p>
+    </section>
+</body>
+
+</html>

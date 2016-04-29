@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS书写规范</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+    <link rel='stylesheet' type='text/css' href='css/fonts.css'>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
+</head>
+
+<body>
+    <section class="main-content">
+        <h1>JS书写规范</h1>
+        <p>为何规范？</p>
+        <ul>
+            <li>1、规范不是一种约束，而是一种约定，强调团队的一致性</li>
+            <li>2、加强团队的合作性，提高协作效率</li>
+            <li>3、形成一种团队文化，积累知识</li>
+            <li>4、规范最终是为项目服务的，我们所做的一切都是为了优化项目和流程提高我们的工作效率</li>
+        </ul>
+        <h3>1、文件编码统一为utf-8,书写过程过,每行代码结束必须有分号;原则上所有功能均根据XXX项目需求原生开发,以避免网上down下来的代码造成的代码污染(沉冗代码||与现有代码冲突||…);</h3>
+        <h3>2、变量命名:驼峰式命名.原生JavaScript变量要求是纯英文字母,首字母须小写,如weiChangHua;jQuery变量要求首字符为’_’,其他与原生JavaScript规则相同,如:_weiChangHua;另,要求变量集中声明,避免全局变量.</h3>
+        <h3>3、类命名:首字母大写,驼峰式命名.如WeiChangHua;</h3>
+        <h3>4、函数命名:首字母小写驼峰式命名.如weiChangHua();</h3>
+        <h3>5、命名语义化,尽可能利用英文单词或其缩写;</h3>
+        <h3>6、尽量避免使用存在兼容性及消耗资源的方法或属性,比如eval_r()&innerText;</h3>
+        <pre>有时候可以给选择器添加一个表示状态的前缀，让语义更明了，比如下面是添加了“.is-”前缀。<br/>.withdrawal{}我们添加.is-withdrawal{}</pre>
+        <h3>7、书写注释，方便程序开发嵌套。注释格式，统一使用双斜杠加*。：</h3>
+        <h3>8、后期优化中,JavaScript非注释类中文字符须转换成unicode编码使用,以避免编码错误时乱码显示;</h3>
+        <h3>9、代码结构明了,加适量注释.提高函数重用率;</h3>
+        <h3>10、注重与html分离,减小reflow,注重性能.</h3>
+        <h3>11、上下模块之间的间距统一使用下一个模块的margin-top来实现，好处是：如果没有下一个模块也不会多出一段空隙。</h3>
+        <h3>12、hover，selected，disabled，current等具有特定意义的请勿直接占用。</h3>
+        <h3>13、:link :visited :hover :active书写顺序 L-V-H-A，速记：LoVe（喜欢）HAte（讨厌）。</h3>
+        <h3>14、不要使用 @import</h3>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS书写规范</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+    <link rel='stylesheet' type='text/css' href='css/fonts.css'>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
+</head>
+
+<body>
+    <section class="main-content">
+        <h1>CSS书写规范</h1>
+        <p>为何规范？</p>
+        <ul>
+            <li>1、规范不是一种约束，而是一种约定，强调团队的一致性</li>
+            <li>2、加强团队的合作性，提高协作效率</li>
+            <li>3、形成一种团队文化，积累知识</li>
+            <li>4、规范最终是为项目服务的，我们所做的一切都是为了优化项目和流程提高我们的工作效率</li>
+        </ul>
+        <h3>1、使用CSS缩写属性</h3>
+        <pre>CSS有些属性是可以缩写的，比如padding,margin,font等等，这样精简代码同时又能提高用户的阅读体验。<br/>例如:<br/>.css {<br/>padding-top: 10px;<br/>padding-bottom: 1px;<br/>padding-right: 12px;<br/>padding-left: 10px;<br/>}<br/>我们可以缩写<br/>.css {<br/>padding:10px 12px 1px 10px;<br/>}</pre>
+        <h3>2、去掉小数点前的“0”</h3>
+        <pre>font-size: 0.8rem;我们可以去掉0：font-size:.8rem;</pre>
+        <h3>3、CSS选择器命名规范</h3>
+        <pre>一、命名禁止用汉字拼音，统一用英文，不会英文百度。<br/>二、简写类名，但前提是要让人看懂你的命名才能简写哦！例如：.navigation我们可以简写为nav，<br/>但.author就不能简写为.aut,因为根本不知道你写的什么!<br/>三、长名称或词组可以使用中横线来为选择器命名。不建议使用“_”下划线来命名CSS选择器，为什么呢？<br/>1、输入的时候少按一个shift键；<br/>2、浏览器兼容问题 （比如使用_tips的选择器命名，在IE6是无效的）</pre>
+        <h3>4、16进制颜色代码缩写</h3>
+        <pre>color:#fffff;我们可以缩写为color:#fff;</pre>
+        <h3>5、不要随意使用Id</h3>
+        <pre>id在JS是唯一的，不能多次使用，而使用class类选择器却可以重复使用，另外id的优先级优先与class，所以id应该<br/>按需使用，而不能滥用。</pre>
+        <h3>6、为选择器添加状态前缀</h3>
+        <pre>有时候可以给选择器添加一个表示状态的前缀，让语义更明了，比如下面是添加了“.is-”前缀。<br/>.withdrawal{}我们添加.is-withdrawal{}</pre>
+        <h3>7、书写注释，方便程序开发嵌套。注释格式，统一使用双斜杠加*。：</h3>
+        <pre>开始注释：/* 注释 start */<br/>结束注释：/* 注释文案 end */<br/>允许只有开始注释</pre>
+        <h3>8、勿使用冗余低效的 CSS 写法，例如：ul li a span{... }</h3>
+        <h3>9、慎用 !important</h3>
+        <h3>10、开发过程中的未定事项，须用 [!] 标出，以便于后续讨论整理。</h3>
+        <h3>11、上下模块之间的间距统一使用下一个模块的margin-top来实现，好处是：如果没有下一个模块也不会多出一段空隙。</h3>
+        <h3>12、hover，selected，disabled，current等具有特定意义的请勿直接占用。</h3>
+        <h3>13、:link :visited :hover :active书写顺序 L-V-H-A，速记：LoVe（喜欢）HAte（讨厌）。</h3>
+        <h3>14、不要使用 @import</h3>
+        <h3>15、为JavaScript预留钩子的命名,请以J_起始,比如:J_hide,J_show;用于调用</h3>
+    </section>
+</body>
+
+</html>

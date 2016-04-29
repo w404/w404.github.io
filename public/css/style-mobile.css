@@ -1,7 +1,6 @@
 /*
 	Aerial 1.0 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	
 */
 
 
@@ -106,7 +105,7 @@ textarea {
     }
 }
 
-#bg {
+.bg {
     background-size: 500px auto;
     width: 1500px;
 }
@@ -114,22 +113,22 @@ textarea {
 
 /* Header */
 
-#header h1 {
+.header h1 {
     font-size: 2.5em;
 }
 
-#header p {
+.header p {
     font-size: 1em;
 }
 
-#header nav {
+.header nav {
     font-size: 1em;
 }
 
-#header nav a:hover {
+.header nav a:hover {
     font-size: 1em;
 }
 
-#header nav a:active {
+.header nav a:active {
     font-size: 1em;
 }

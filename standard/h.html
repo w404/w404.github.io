@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML书写规范</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+    <link rel='stylesheet' type='text/css' href='css/fonts.css'>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/github-light.css" media="screen">
+</head>
+
+<body>
+    <section class="main-content">
+        <h1>HTML书写规范</h1>
+        <p>为何规范？</p>
+        <ul>
+            <li>1、规范不是一种约束，而是一种约定，强调团队的一致性</li>
+            <li>2、加强团队的合作性，提高协作效率</li>
+            <li>3、形成一种团队文化，积累知识</li>
+            <li>4、规范最终是为项目服务的，我们所做的一切都是为了优化项目和流程提高我们的工作效率</li>
+        </ul>
+        <h3>1、推荐使用html5的文档声明</h3>
+        <pre>&lt;!DOCTYPE HTML&gt;</pre>
+        <h3>2、必须申明文档的编码charset，且与文件本身编码保持一致，推荐使用UTF-8编码</h3>
+        <pre>&lt;meta charset="UTF-8"&gt;</pre>
+        <h3>3、title 不可缺少，控制在25个字、50个字节以内。“二级栏目 - 一级栏目 - 网站名称”。</h3>
+        <h3>4、keywords很重要，关键词，针对SEO。5个左右,单个8汉字以内；禁忌堆砌，与网站主题无关。</h3>
+        <h3>5、description网站描述，字数尽量空制在80个汉字，160个字符以内</h3>
+        <h3>6、书写注释，方便程序开发嵌套。注释方式：</h3>
+        <pre>开始注释：&lt;!-- 注释 --&gt;<br/>结束注释：&lt;!-- /注释文案 --&gt;<br/>允许只有开始注释<br/>注意： 浮动的地方不要加注释，可能导致布局错位或文字的BUG。</pre>
+        <h3>7、img添加alt属性，增加可访问性。</h3>
+        <pre>&lt;img src="" alt="图片描述" title="图片描述"&gt;</pre>
+      	<h3>8、在页面head标签中引入所有的样式表文件和在页面底部引入javascript文件</h3>
+      	<h3>9、不要使用嵌入式CSS样式和javaScript</h3>
+        <pre>尽量不要在html写css样式和javaScript
+      	</pre>
+      	<h3>4、使用小写的标记</h3>
+        <pre>
+          正确写法&lt;div&gt;闭合标签&lt;/div&gt;
+          错误写法&lt;DIV&gt;闭合标签&lt;/DIV&gt;
+      	</pre>
+        <h3>3、一定要闭合HTML标签</h3>
+        <pre>
+          正确写法&lt;div&gt;闭合标签&lt;/div&gt;
+          错误写法&lt;div&gt;非闭合标签
+      	</pre>
+        <h3>2、多媒体后备：为多媒体提供备选内容</h3>
+        <pre>
+          典型就是为img添加alt内容。
+      	</pre>
+
+        <h3>3、语义性(适用范围：支持语义标签场景)</h3>
+        <pre>
+        对于HTML5而言，例如header、footer、nav、section等
+        跟div能实现的功能基本类似，但是语义性上有着天壤之别。
+      	</pre>
+        <h3>4、TODO待定项</h3>
+        <pre>
+        尚未实现的或待定的内容一定要标识强调出来，利用TODO辨识，而非其他诸如@@来强调。
+        在todo项中如果有必要列明联系人，比如负责人。在TODO后追加一个冒号作为行动内容，
+        例 如 TODO:增加HTML5模板
+      	</pre>
+        <h3>6、创建或编辑裸仓库post-receive，实现第5步</h3>
+        <pre>
+        #!/bin/sh
+
+        #git 的钩子在运转的时分会调用 GIT_DIR 这个环境变量
+        #若缺少会报错：remote: fatal: Not a git repository: ‘.’
+        unset $(git rev-parse --local-env-vars)
+
+        #此文件夹保存自动获取的代码（测试站点资源路径）
+        devPath=XXXX
+
+        #获取提交的信息 旧版本 新版版 分支名称
+        while read oldrev newrev refname
+        do  
+            branch=$(git rev-parse --symbolic --abbrev-ref $refname)
+            #if [ "master" == "$branch" ]; then
+            #  echo current branch $branch
+            #fi
+        done 
+
+        echo "\033[32m current branch $branch \033[0m"
+
+        #自动拉取提交的代码 
+        cd $devPath
+        if [ "master" == "$branch" ]; then
+            git checkout master
+            git pull origin master
+            echo "\033[32m pull branch master done... \033[0m"
+        fi
+
+        #如果不是master分支（开发分支）则迁出分支
+        if [ "master" != "$branch" ]; then
+            git checkout $branch
+            git pull origin $branch
+            echo "\033[32m pull branch $branch done... \033[0m"
+        fi
+
+        gulp clean
+        echo "\033[32m clean old files done... \033[0m"
+        gulp
+        echo "\033[32m gulp branch $branch done... \033[0m"
+
+        # 设置node环境为生产环境 并重启测试站点
+        NODE_ENV=production 
+        forever restartall
+        echo "\033[32m restart website done... \033[0m"
+
+        #退出
+        exit 0
+      </pre>
+        <h3>7、为钩子文件post-receive添加可执行权限 很重要</h3>
+        <pre>
+        chmod +x post-receive
+      </pre>
+    </section>
+</body>
+
+</html>

@@ -229,6 +229,8 @@ li {
 .footer .main .footer-center p {
   margin-top: 46px;
   font-size: 14px;
+  width: 100%;
+  text-align: left;
 }
 .footer .main .footer-right {
   width: 282px;

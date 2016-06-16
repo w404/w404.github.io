@@ -226,11 +226,25 @@ li {
   color: #fff;
   font-size: 16px;
 }
-.footer .main .footer-center p {
+.footer .main .footer-center .cp {
   margin-top: 46px;
   font-size: 14px;
   width: 100%;
   text-align: left;
+}
+.footer .main .footer-center .cp .cp-left {
+  width: 464px;
+  text-align: left;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.footer .main .footer-center .cp .cp-right {
+  width: 246px;
+  text-align: left;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
 }
 .footer .main .footer-right {
   width: 282px;

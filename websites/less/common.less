@@ -1,0 +1,136 @@
+.header {
+    position: relative;
+    overflow: hidden;
+    width: 1180px;
+    margin: 0 auto;
+    .top-logo {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        width: 220px;
+        height: 80px;
+        background: url(../images/logo-top.png) no-repeat;
+        float: left;
+        cursor: pointer;
+    }
+    .right-container {
+        float: right;
+        line-height: 80px;
+        font-size: 16px;
+        color: #777;
+        span {
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+            margin-right: -4px;
+        }
+        a {
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+            color: #777;
+            width: 145px;
+            text-align: center;
+            margin: 0px -2px;
+            text-decoration: none
+        }
+        a.selected {
+            border-bottom: 3px solid #0ba9f3;
+            color: #0ba9f3;
+            cursor: default;
+        }
+        a:hover {
+            color: #0ba9f3;
+            cursor: pointer;
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    background-color: #3e4244;
+    .main {
+        position: relative;
+        width: 1180px;
+        margin: 0 auto;
+        font-size: 12px;
+        overflow: hidden;
+        *zoom: 1;
+        .logo-footer {
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+            margin: 20px auto;
+            background: url(../images/logo-footer.png) no-repeat;
+            float: left;
+            line-height: 190px;
+        }
+        .footer-center {
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+            color: #e2e1e1;
+            margin: 50px 37px 45px 57px;
+            ul {
+                li {
+                    float: left;
+                    list-style: none;
+                    margin-left: 35px;
+                    padding-right: 36px;
+                    border-right: 1px solid #e2e1e1;
+                    cursor: pointer;
+                    &.last-li {
+                        border: none;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+                li:first-child {
+                    margin-left: 0;
+                }
+            }
+            p {
+                margin-top: 38px;
+            }
+        }
+        .footer-right {
+            margin: 28px auto;
+            overflow: hidden;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            span {
+                display: inline-block;
+                *display: inline;
+                zoom: 1;
+                text-align: center;
+                .title {
+                    color: #e2e1e1;
+                    display: block;
+                }
+                .weixin {
+                    width: 100px;
+                    height: 100px;
+                    display: inline-block;
+                    *display: inline;
+                    zoom: 1;
+                    background: url(../images/weixin.png) no-repeat;
+                }
+                .download {
+                    width: 100px;
+                    height: 100px;
+                    display: inline-block;
+                    *display: inline;
+                    zoom: 1;
+                    background: url(../images/weixin.png) no-repeat;
+                }
+            }
+        }
+    }
+}

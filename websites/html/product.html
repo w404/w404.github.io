@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>正蓝钱包－产品介绍</title>
+    <meta name="keywords" content="正蓝钱包、信用生活服务、大学生、校园生活、金融服务">
+    <meta name="description" content="正蓝钱包，展示了以信用服务为基础的正蓝钱包app产品信息，我们专注于校园生活场景与消费金融服务的结合，为在校大学生提供校园信用生活服务，让大学生的信用更值钱。">
+    <meta http-equiv="x-ua-compatible" content="chrome=1, ie=edge">
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link href="../css/product.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="header clearfix">
+        <a href="index.html" class="top-logo"></a>
+        <div class="right-container">
+            <a href="index.html">首页</a><span>|</span>
+            <a class="selected">产品介绍</a><span>|</span>
+            <a href="about.html">关于我们</a><span>|</span>
+            <a href="help.html">帮助中心</a>
+        </div>
+    </div>
+    <div class="banner">
+        <img id="bannerImg" class="banner-img" src="../images/index-banner.jpg" />
+        <div class="banner-ad">
+            <div class="ad-boxs">
+                <div id="sliderContainer" class="ad-box">
+                    <ul id="slider" class="banner-ul">
+                        <li>
+                            <img src="../images/index-ad-1.jpg" alt="" />
+                        </li>
+                        <li>
+                            <img src="../images/index-ad-2.jpg" alt="" />
+                        </li>
+                        <li>
+                            <img src="../images/index-ad-3.jpg" alt="" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img class="banner-cloud-shape" src="../images/index-cloud-shape.png" ">
+        <img class="banner-cloud " src="../images/index-cloud.png " />
+        <div class="banner-code ">
+            <div class="code "></div>
+            <div class="code-img "></div>
+        </div>
+    </div>
+    <div class="product-img ">
+        <img src="../images/product-2.jpg " />
+        <img src="../images/product-3.jpg " />
+        <img src="../images/product-4.jpg " />
+    </div>
+    <div class="footer ">
+        <div class="main clearfix ">
+            <i class="logo-footer "></i>
+            <div class="footer-center ">
+                <ul class="clearfix ">
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="javascript:void(0);">产品介绍</a></li>
+                    <li><a href="help.html">帮助中心</a></li>
+                    <li><a href="about.html ">联系我们</a></li>
+                    <li class="last-li "><a href="advertise.html ">招贤纳士</a></li>
+                </ul>
+                <p>Copyright @ 2015 All Rights Reserved 杭州积信网网络科技有限公司 <span>浙ICP备15009597号-1</span></p>
+            </div>
+            <div class="footer-right ">
+                <span class="mt1 ">
+                        <i class="weixin "></i>
+                        <span class="title ">扫码关注微信公众号</span>
+                </span>
+                <span>
+                        <i class="download "></i>
+                        <span class="title ">扫码下载客户端</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript ">
+var $ = function(id) {
+    return 'string' == typeof id ? document.getElementById(id) : id;
+};
+var extend = function(destination, source) {
+    for (var property in source) {
+        destination[property] = source[property];
+    }
+    return destination;
+}
+var currentStyle = function(element) {
+    return element.currentStyle || document.defaultView.getComputedStyle(element, null);
+}
+var bind = function(object, fun) {
+    var args = Array.prototype.slice.call(arguments).slice(2);
+    return function() {
+        return fun.apply(object, args.concat(Array.prototype.slice.call(arguments)));
+    }
+}
+var Tween = {
+    Quart: {
+        easeOut: function(t, b, c, d) {
+            return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+        }
+    },
+    Back: {
+        easeOut: function(t, b, c, d, s) {
+            if (s == undefined) s = 1.70158;
+            return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
+        }
+    },
+    Bounce: {
+        easeOut: function(t, b, c, d) {
+            if ((t /= d) < (1 / 2.75)) {
+                return c * (7.5625 * t * t) + b;
+            } else if (t < (2 / 2.75)) {
+                return c * (7.5625 * (t -= (1.5 / 2.75)) * t + .75) + b;
+            } else if (t < (2.5 / 2.75)) {
+                return c * (7.5625 * (t -= (2.25 / 2.75)) * t + .9375) + b;
+            } else {
+                return c * (7.5625 * (t -= (2.625 / 2.75)) * t + .984375) + b;
+            }
+        }
+    }
+};
+
+//容器对象,滑动对象,切换数量
+var SlideTrans = function(container, slider, count, options) {
+    this._slider = $(slider);
+    this._container = $(container); //容器对象
+    this._timer = null; //定时器
+    this._count = Math.abs(count); //切换数量
+    this._target = 0; //目标值
+    this._t = this._b = this._c = 0; //tween参数
+    this.Index = 0; //当前索引
+    this.setOptions(options);
+    this.Auto = !!this.options.Auto;
+    this.Duration = Math.abs(this.options.Duration);
+    this.Time = Math.abs(this.options.Time);
+    this.Pause = Math.abs(this.options.Pause);
+    this.Tween = this.options.Tween;
+    this.onStart = this.options.onStart;
+    this.onFinish = this.options.onFinish;
+    this.tagName = this.options.tagName;
+    var bVertical = !!this.options.Vertical;
+    this._css = bVertical ? 'top' : 'left'; //方向
+    //样式设置
+    var p = currentStyle(this._container).position;
+    p == 'relative' || p == 'absolute' || (this._container.style.position = 'relative');
+    this.Change = this.options.Change ? this.options.Change :
+        this._slider[bVertical ? 'offsetHeight' :  'offsetWidth'] / this._count;
+};
+SlideTrans.prototype = {
+    //设置默认属性
+    setOptions: function(options) {
+        this.options = { //默认值
+            tagName: 'li', //子标签
+            Vertical: true, //是否垂直方向（方向不能改）
+            Auto: true, //是否自动
+            Change: 0, //改变量
+            Duration: 50, //滑动持续时间
+            Time: 10, //滑动延时
+            Pause: 3000, //停顿时间(Auto为true时有效)
+            onStart: function() {}, //开始转换时执行
+            onFinish: function() {}, //完成转换时执行
+            Tween: Tween.Quart.easeOut //tween算子
+        };
+        extend(this.options, options || {});
+    },
+    //开始切换
+    run: function(index) {
+        this._t = 0;
+        this._b = parseInt(currentStyle(this._slider)[this.options.Vertical ? 'top' : 'left']);
+        if (typeof index == 'undefined') {
+            this._c = 0;
+            this.Index = index;
+        } else {
+            this._c = -Math.abs(this.Change);
+        }
+        //设置参数
+        this.onStart();
+        this.move();
+    },
+    //移动
+    move: function() {
+        clearTimeout(this._timer);
+        //未到达目标继续移动否则进行下一次滑动
+        if (this._c && this._t < this.Duration) {
+            this.moveTo(Math.round(this.Tween(this._t++, this._b, this._c, this.Duration)));
+            this._timer = setTimeout(bind(this, this.move), this.Time);
+        } else {
+            if (typeof this.Index != 'undefined') {
+                var tmpTag = this._slider.getElementsByTagName(this.tagName)[0];
+                this._slider.removeChild(tmpTag);
+                this._slider.appendChild(tmpTag);
+            }
+            this.moveTo(0);
+            this.Auto && (this._timer = setTimeout(bind(this, this.next), this.Pause));
+        }
+    },
+    //移动到
+    moveTo: function(i) {
+        this._slider.style[this._css] = i + 'px';
+    },
+    //下一个
+    next: function() {
+        this.run(++this.Index);
+    },
+    //上一个
+    previous: function() {
+        this.run(--this.Index);
+    },
+    //停止
+    stop: function() {
+        clearTimeout(this._timer);
+        this.moveTo(this._target);
+    }
+};
+
+var st = new SlideTrans('sliderContainer', 'slider', 3, {
+    Vertical: false
+});
+
+st.run();
+</script>
+
+</html>

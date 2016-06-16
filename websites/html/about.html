@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>正蓝钱包－关于我们</title>
+    <meta name="keywords" content="正蓝钱包、信用生活服务、大学生、校园生活、金融服务">
+    <meta name="description" content="正蓝钱包，展示了以信用服务为基础的正蓝钱包app产品信息，我们专注于校园生活场景与消费金融服务的结合，为在校大学生提供校园信用生活服务，让大学生的信用更值钱。">
+    <meta http-equiv="x-ua-compatible" content="chrome=1, ie=edge">
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link href="../css/about.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ds1PXYnTxeEmluLbTGyLHloeLHiYQDM8"></script>
+</head>
+
+<body>
+    <div class="header clearfix">
+        <a href="index.html" class="top-logo"></a>
+        <div class="right-container">
+            <a href="index.html">首页</a><span>|</span>
+            <a href="product.html">产品介绍</a><span>|</span>
+            <a class="selected">关于我们</a><span>|</span>
+            <a href="help.html">帮助中心</a>
+        </div>
+    </div>
+    <div class="banner"></div>
+    <div class="container">
+        <div class="center">
+            <div class="line">
+                <h3 class="title">关于我们</h3>
+                <h4>About Us</h4>
+            </div>
+            <div class="about-us">
+                <div class="summuny">杭州积信网络科技有限公司于2015年1月成立，旗下品牌”正蓝钱包“专注于校园生活场景与消费金融服务的结合，为在校 大学生提供校园信用生活服务。立足线下场景拓展线上金服，致力于影响和改变校园生活消费的理念和方式。
+                </div>
+                <div class="service">
+                    <h3><strong>服务内容</strong></h3>
+                    <p>正蓝钱包以信用服务为基础，立足于大学生校园生活的服务场景提供消费金融服务，更好的方便同学们的学习和生活，让大 学生的信用更值钱。正蓝钱包申请手续高效便捷，费用低，致力于为在校大学生提供即时在线信用消费服务，影响和改变大 学生生活消费的理念和方式。
+                    </p>
+                </div>
+                <ul class="develop">
+                    <h3><strong>发展历程</strong></h3>
+                    <li>2015年1月，杭州积信网络科技有限公司注册成立；</li>
+                    <li>2015年6月，获得天使轮融资；</li>
+                    <li>2016年1月，获得了A轮融资；</li>
+                    <li>2016年2月，团队重组扩建，开始移动端“正蓝钱包”的开发路程；</li>
+                    <li>2016年5月，公司旗下产品“正蓝钱包”app正式上线；</li>
+                    <li>正蓝钱包网站（www.izhenglan.com）和正蓝钱包的手机应用程序由杭州积信网络科技有限公司所有。</li>
+                </ul>
+            </div>
+            <div class="line">
+                <h3 class="title">联系我们</h3>
+                <h4>Contact Us</h4>
+            </div>
+            <div class="contact-us">
+                <ul class="contact-info">
+                    <li>杭州积信网络科技有限公司</li>
+                    <li>地址：杭州市西湖区资金广场C座15楼1502室</li>
+                    <li>电话：400-8849-365</li>
+                    <li>投诉邮箱：service@jixin365.com</li>
+                    <li>工作时间：9:00-18:00</li>
+                </ul>
+                <div id="allmap" class="contact-map" style="width:750px;height:480px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="main clearfix">
+            <i class="logo-footer"></i>
+            <div class="footer-center">
+                <ul class="clearfix">
+                    <li><a href="javascript:void(0);">关于我们</a></li>
+                    <li><a href="product.html">产品介绍</a></li>
+                    <li><a href="help.html">帮助中心</a></li>
+                    <li><a href="about.html">联系我们</a></li>
+                    <li class="last-li"><a href="advertise.html">招贤纳士</a></li>
+                </ul>
+                <p>Copyright @ 2015 All Rights Reserved 杭州积信网网络科技有限公司 <span>浙ICP备15009597号-1</span></p>
+            </div>
+            <div class="footer-right">
+                <span class="mt1">
+                        <i class="weixin"></i>
+                        <span class="title">扫码关注微信公众号</span>
+                </span>
+                <span>
+                        <i class="download"></i>
+                        <span class="title">扫码下载客户端</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+// 百度地图API功能
+var map = new BMap.Map("allmap"); // 创建Map实例
+var mPoint = new BMap.Point(120.219, 30.259);
+map.centerAndZoom(mPoint, 16);
+var myGeo = new BMap.Geocoder();
+// 将地址解析结果显示在地图上,并调整地图视野
+myGeo.getPoint("杭州西湖区紫金广场C座1502", function(point) {
+    if (point) {
+        map.centerAndZoom(point, 18);
+        map.addOverlay(new BMap.Marker(point));
+        var circle = new BMap.Circle(point, 30, {
+            fillColor: '#dbe2e7',
+            strokeWeight: 1,
+            fillOpacity: 0.3,
+            strokeOpacity: 0.3
+        });
+        map.addOverlay(circle);
+        var local = new BMap.LocalSearch(map, {
+            renderOptions: {
+                map: map,
+                pageCapacity: 8,
+                autoViewport: true,
+                selectFirstResult: false
+            }
+        });
+        local.searchNearby('紫金广场', point, 200);
+    } else {
+        alert("您选择地址没有解析到结果!");
+    }
+}, "杭州市");
+</script>
+
+</html>

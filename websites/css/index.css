@@ -455,6 +455,7 @@ li {
   *display: inline;
   zoom: 1;
   background: url(../images/index-pentagon.png) no-repeat;
+  background-size: cover;
   margin: 52px 0 72px 134px;
 }
 .container .main .main-right {

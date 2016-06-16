@@ -171,7 +171,7 @@ li {
   cursor: pointer;
 }
 .footer {
-  position: absolute;
+  position: relative;
   overflow: hidden;
   width: 100%;
   background-color: #3e4244;
@@ -456,7 +456,6 @@ li {
   zoom: 1;
   background: url(../images/index-pentagon.png) no-repeat;
   margin: 52px 0 72px 134px;
-  vertical-align: middle;
 }
 .container .main .main-right {
   float: right;
@@ -464,7 +463,6 @@ li {
   *display: inline;
   zoom: 1;
   margin: 65px 0 72px 95px;
-  vertical-align: middle;
 }
 .container .main .main-right .num1 {
   width: 42px;

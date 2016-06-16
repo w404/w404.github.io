@@ -220,9 +220,11 @@ li {
 .footer .main .footer-center ul li a {
   text-decoration: none;
   color: #fff;
+  font-size: 16px;
 }
 .footer .main .footer-center p {
   margin-top: 46px;
+  font-size: 14px;
 }
 .footer .main .footer-right {
   width: 282px;

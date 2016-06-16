@@ -92,6 +92,7 @@ html {
 html,
 body {
   height: 100%;
+  background-color: #fff;
 }
 body {
   min-width: 1180px;
@@ -376,9 +377,15 @@ li {
   height: auto;
   background-color: #fff;
   width: 100%;
+  min-height: 100%;
 }
 .product-img img {
   height: 100%;
   width: 100%;
   display: block;
+}
+@media screen and (max-width: 750px) {
+  .product-img {
+    min-height: 0px;
+  }
 }

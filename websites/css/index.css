@@ -448,6 +448,7 @@ li {
   overflow: hidden;
 }
 .container .main .main-left {
+  float: left;
   width: 336px;
   height: 296px;
   display: inline-block;
@@ -458,6 +459,7 @@ li {
   vertical-align: middle;
 }
 .container .main .main-right {
+  float: right;
   display: inline-block;
   *display: inline;
   zoom: 1;

@@ -185,22 +185,21 @@ li {
   *zoom: 1;
 }
 .footer .main .logo-footer {
-  width: 150px;
-  height: 150px;
+  width: 188px;
+  height: 190px;
   display: inline-block;
   *display: inline;
   zoom: 1;
-  margin: 20px auto;
-  background: url(../images/logo-footer.png) no-repeat;
+  background: url(../images/logo-footer.png) no-repeat 0 38px;
   float: left;
-  line-height: 190px;
 }
 .footer .main .footer-center {
   display: inline-block;
   *display: inline;
   zoom: 1;
   color: #e2e1e1;
-  margin: 50px 37px 45px 57px;
+  width: 710px;
+  margin-top: 54px;
 }
 .footer .main .footer-center ul li {
   float: left;
@@ -221,10 +220,11 @@ li {
   margin-left: 0;
 }
 .footer .main .footer-center p {
-  margin-top: 38px;
+  margin-top: 46px;
 }
 .footer .main .footer-right {
-  margin: 28px auto;
+  width: 282px;
+  margin: 32px auto;
   overflow: hidden;
   position: absolute;
   top: 0px;
@@ -234,27 +234,28 @@ li {
   display: inline-block;
   *display: inline;
   zoom: 1;
-  text-align: center;
+  text-align: left;
 }
 .footer .main .footer-right span .title {
   color: #e2e1e1;
   display: block;
+  margin-top: 4px;
 }
 .footer .main .footer-right span .weixin {
-  width: 100px;
-  height: 100px;
+  width: 172px;
+  height: 97px;
   display: inline-block;
   *display: inline;
   zoom: 1;
-  background: url(../images/weixin.png) no-repeat;
+  background: url(../images/weixin.png) no-repeat 18px 0px;
 }
 .footer .main .footer-right span .download {
-  width: 100px;
-  height: 100px;
+  width: 105px;
+  height: 97px;
   display: inline-block;
   *display: inline;
   zoom: 1;
-  background: url(../images/weixin.png) no-repeat;
+  background: url(../images/client.png) no-repeat left center;
 }
 .banner {
   position: relative;

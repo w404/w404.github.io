@@ -451,13 +451,12 @@ li {
 .container .main .main-left {
   position: relative;
   float: left;
-  width: 336px;
-  height: 296px;
+  width: 568px;
+  height: 415px;
   display: inline-block;
   *display: inline;
   zoom: 1;
-  background: url(../images/index-pentagon.png) no-repeat;
-  background-size: cover;
+  background: url(../images/index-pentagon.png) no-repeat center center;
 }
 .container .main .main-right {
   position: relative;
@@ -465,6 +464,9 @@ li {
   display: inline-block;
   *display: inline;
   zoom: 1;
+  width: 532px;
+  height: 415px;
+  margin-top: 68px;
 }
 .container .main .main-right .num1 {
   width: 42px;

@@ -201,23 +201,25 @@ li {
   width: 710px;
   margin-top: 54px;
 }
+.footer .main .footer-center ul {
+  width: 100%;
+}
 .footer .main .footer-center ul li {
   float: left;
   list-style: none;
-  margin-left: 35px;
-  padding-right: 36px;
-  border-right: 1px solid #e2e1e1;
+  width: 92px;
+  text-align: left;
+  margin-right: 42px;
+  border-right: 2px solid #e2e1e1;
   cursor: pointer;
 }
 .footer .main .footer-center ul li.last-li {
   border: none;
+  margin-right: 0px;
 }
 .footer .main .footer-center ul li a {
   text-decoration: none;
   color: #fff;
-}
-.footer .main .footer-center ul li:first-child {
-  margin-left: 0;
 }
 .footer .main .footer-center p {
   margin-top: 46px;

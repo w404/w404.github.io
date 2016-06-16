@@ -207,11 +207,15 @@ li {
 .footer .main .footer-center ul li {
   float: left;
   list-style: none;
-  width: 92px;
-  text-align: left;
-  margin-right: 42px;
+  width: 136px;
+  text-align: center;
   border-right: 2px solid #e2e1e1;
   cursor: pointer;
+  display: block;
+}
+.footer .main .footer-center ul li.first-li {
+  width: 95px;
+  text-align: left;
 }
 .footer .main .footer-center ul li.last-li {
   border: none;

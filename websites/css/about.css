@@ -133,9 +133,9 @@ li {
   display: inline-block;
   *display: inline;
   zoom: 1;
-  width: 220px;
+  width: 207px;
   height: 80px;
-  background: url(../images/logo-top.png) no-repeat;
+  background: url(../images/logo-top.png) no-repeat center center;
   float: left;
   cursor: pointer;
 }

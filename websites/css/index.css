@@ -133,9 +133,9 @@ li {
   display: inline-block;
   *display: inline;
   zoom: 1;
-  width: 220px;
+  width: 207px;
   height: 80px;
-  background: url(../images/logo-top.png) no-repeat;
+  background: url(../images/logo-top.png) no-repeat center center;
   float: left;
   cursor: pointer;
 }
@@ -446,8 +446,10 @@ li {
   position: relative;
   margin: 0px auto;
   overflow: hidden;
+  width: 100%;
 }
 .container .main .main-left {
+  position: relative;
   float: left;
   width: 336px;
   height: 296px;
@@ -459,6 +461,7 @@ li {
   margin: 52px 0 72px 134px;
 }
 .container .main .main-right {
+  position: relative;
   float: right;
   display: inline-block;
   *display: inline;

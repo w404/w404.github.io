@@ -382,9 +382,9 @@ li {
   width: 100%;
 }
 .container .center .content .detail .comment .help-answer {
-  width: 770px;
+  width: 790px;
   font-size: 14px;
-  height: auto;
+  margin: 0 auto;
 }
 .container .center .content .detail .comment .help-answer .key {
   width: 30px;
@@ -392,12 +392,15 @@ li {
   *display: inline;
   zoom: 1;
   font-size: 14px;
+  vertical-align: top;
+  text-align: left;
 }
 .container .center .content .detail .comment .help-answer .val {
+  vertical-align: top;
   font-size: 14px;
   display: inline-block;
   *display: inline;
   zoom: 1;
-  width: 730px;
+  width: 760px;
   text-align: left;
 }

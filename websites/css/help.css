@@ -294,7 +294,7 @@ li {
 .banner {
   width: 100%;
   height: 195px;
-  background: url(../images/banner.jpg) #0b98df no-repeat center;
+  background: url(../images/banner.jpg) #0b98df no-repeat center center;
 }
 .container {
   position: relative;
@@ -348,7 +348,8 @@ li {
   vertical-align: top;
   float: right;
   width: 860px;
-  margin-top: 27px;
+  height: 890px;
+  padding-top: 27px;
 }
 .container .center .content .detail {
   width: 790px;

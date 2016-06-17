@@ -377,13 +377,18 @@ li {
   width: 770px;
   font-size: 14px;
   height: auto;
-  padding-left: 30px;
+  overflow: hidden;
   text-align: justify;
   word-wrap: break-word;
   word-break: break-all;
 }
-.container .center .content .detail .comment p span {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.container .center .content .detail .comment p .key {
+  width: 30px;
+  float: left;
+  height: 100%;
+}
+.container .center .content .detail .comment p .val {
+  width: 740px;
+  float: left;
+  height: 100%;
 }

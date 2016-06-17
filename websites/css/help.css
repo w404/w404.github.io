@@ -393,9 +393,6 @@ li {
   display: inline-block;
   *display: inline;
   zoom: 1;
-  width: 740px;
+  width: 730px;
   height: 100%;
-  text-align: justify;
-  word-wrap: break-word;
-  word-break: break-all;
 }

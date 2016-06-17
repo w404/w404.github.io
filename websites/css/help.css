@@ -378,17 +378,27 @@ li {
   font-size: 14px;
   height: auto;
   overflow: hidden;
-  text-align: justify;
-  word-wrap: break-word;
-  word-break: break-all;
 }
 .container .center .content .detail .comment p .key {
+  position: relative;
   width: 30px;
   float: left;
   height: 100%;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin: 0 auto;
 }
 .container .center .content .detail .comment p .val {
+  position: relative;
+  margin: 0 auto;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
   width: 740px;
   float: left;
   height: 100%;
+  text-align: justify;
+  word-wrap: break-word;
+  word-break: break-all;
 }

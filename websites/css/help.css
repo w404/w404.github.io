@@ -302,13 +302,16 @@ li {
   height: auto;
 }
 .container .center {
+  position: relative;
   width: 1180px;
   margin: 0 auto;
   height: 100%;
+  overflow: hidden;
   background-color: #fff;
   padding: 0px 0px 30px;
 }
 .container .center .nav {
+  float: left;
   width: 295px;
   display: inline-block;
   *display: inline;
@@ -341,10 +344,12 @@ li {
   *display: inline;
   zoom: 1;
   vertical-align: top;
-  margin: 27px 0px 0px 25px;
+  float: right;
+  width: 860px;
+  margin-top: 27px;
 }
 .container .center .content .detail {
-  width: 800px;
+  width: 790px;
   display: none;
 }
 .container .center .content .detail.activated {

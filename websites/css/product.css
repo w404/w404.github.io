@@ -85,6 +85,14 @@ video {
   font-size: 14px;
   font-family: 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '宋体', Helvetica, STHeiti, Arial, sans-serif;
   vertical-align: baseline;
+  -webkit-user-select: text;
+}
+a,
+img {
+  -webkit-touch-callout: none;
+  /*禁用长按弹出系统菜单*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
 }
 html {
   overflow-y: scroll;
@@ -374,18 +382,15 @@ li {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
-  height: auto;
-  background-color: #fff;
   width: 100%;
-  min-height: 100%;
+  height: 764px;
 }
-.product-img img {
-  height: 100%;
-  width: 100%;
-  display: block;
+.product-img.qualification {
+  background: url(../images/product-2.jpg) #40b95f no-repeat center center;
 }
-@media screen and (max-width: 750px) {
-  .product-img {
-    min-height: 0px;
-  }
+.product-img.reviewed {
+  background: url(../images/product-3.jpg) #f7c94f no-repeat center center;
+}
+.product-img.account {
+  background: url(../images/product-4.jpg) #347bde no-repeat center center;
 }

@@ -41,23 +41,21 @@
                 </div>
             </div>
         </div>
-        <img class="banner-cloud-shape" src="../images/index-cloud-shape.png" ">
+        <img class="banner-cloud-shape" src="../images/index-cloud-shape.png">
         <img class="banner-cloud " src="../images/index-cloud.png " />
         <div class="banner-code ">
-            <div class="code "></div>
-            <div class="code-img "></div>
+            <div class="code"></div>
+            <div class="code-img"></div>
         </div>
     </div>
-    <div class="product-img ">
-        <img src="../images/product-2.jpg " />
-        <img src="../images/product-3.jpg " />
-        <img src="../images/product-4.jpg " />
-    </div>
+    <div class="product-img qualification"></div>
+    <div class="product-img reviewed"></div>
+    <div class="product-img account"></div>
     <div class="footer">
         <div class="main clearfix">
             <i class="logo-footer"></i>
             <div class="footer-center">
-               <ul class="clearfix ">
+                <ul class="clearfix ">
                     <li class="first-li"><a href="about.html">关于我们</a></li>
                     <li><a href="javascript:void(0);">产品介绍</a></li>
                     <li><a href="help.html">帮助中心</a></li>
@@ -79,7 +77,18 @@
         </div>
     </div>
 </body>
-<script type="text/javascript ">
+<script type="text/javascript">
+// window.onload = function() {
+//     var offsetWidth = document.body.offsetWidth;
+//     var qUrl = '../images/product-2.jpg';
+//     var qImg = new Image();
+//     var rImg = new Image();
+//     qImg.onload = function() {
+//         var scale = offsetWidth / qImg.width;
+//         $('productQual').style.height = qImg.height * scale + 'px';
+//     };
+//     qImg.src = qUrl + '?t=' + Math.random();
+// }
 var $ = function(id) {
     return 'string' == typeof id ? document.getElementById(id) : id;
 };
@@ -149,7 +158,7 @@ var SlideTrans = function(container, slider, count, options) {
     var p = currentStyle(this._container).position;
     p == 'relative' || p == 'absolute' || (this._container.style.position = 'relative');
     this.Change = this.options.Change ? this.options.Change :
-        this._slider[bVertical ? 'offsetHeight' :  'offsetWidth'] / this._count;
+        this._slider[bVertical ? 'offsetHeight' : 'offsetWidth'] / this._count;
 };
 SlideTrans.prototype = {
     //设置默认属性

@@ -163,9 +163,9 @@ window.onload = function() {
 function nav(event) {
     var parentUl = _$('#navs');
     var lis = _children(parentUl, 'li', 'li');
-    removeClass(lis, 'selected');
     var _this = event.srcElement ? event.srcElement : event.target;
     if (_this && _this.nodeName.toLowerCase() == "li") {
+        removeClass(lis, 'selected');
         addClass(_this, 'selected');
         var index = _this.getAttribute('data-index');
         var parentCon = _$('#contents');

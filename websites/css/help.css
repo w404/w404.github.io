@@ -392,15 +392,18 @@ li {
   display: inline-block;
   *display: inline;
   zoom: 1;
+  font-size: 14px;
   margin: 0 auto;
   vertical-align: top;
 }
 .container .center .content .detail .comment .help-answer .val {
   vertical-align: top;
+  font-size: 14px;
   margin: 0 auto;
   display: inline-block;
   *display: inline;
   zoom: 1;
   width: 730px;
   height: 100%;
+  text-align: left;
 }

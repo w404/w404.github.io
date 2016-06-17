@@ -293,9 +293,9 @@ li {
 }
 .banner {
   position: relative;
-  height: 342px;
+  height: 685px;
   width: 100%;
-  background-color: #1ec0fa;
+  background: url(../images/product-banner.jpg) #1ec0fa no-repeat center center;
   overflow: hidden;
 }
 .banner .banner-img {
@@ -303,41 +303,35 @@ li {
   height: 100%;
   display: block;
 }
-.banner .banner-cloud-shape {
-  position: absolute;
-  left: 0px;
-  bottom: 8px;
-  width: 100%;
-  display: block;
-  z-index: 10;
-}
 .banner .banner-cloud {
   position: absolute;
   left: 0px;
   bottom: 0px;
+  height: 179px;
   width: 100%;
   display: block;
   z-index: 30;
+  background: url(../images/product-cloud.png) no-repeat center center;
 }
 .banner .banner-ad {
   position: absolute;
   left: 50%;
   bottom: 0px;
-  margin-left: -330px;
+  margin-left: -480px;
   height: 100%;
   z-index: 20;
 }
 .banner .banner-ad .ad-boxs {
   position: relative;
-  width: 181px;
+  width: 289px;
   height: 100%;
-  background: url(../images/index-mobile.png) no-repeat center bottom;
+  background: url(../images/product-mobile.png) no-repeat center bottom;
 }
 .banner .banner-ad .ad-boxs .ad-box {
   position: absolute;
-  left: 13px;
-  bottom: -52px;
-  width: 157px;
+  left: 21px;
+  bottom: 47px;
+  width: 248px;
   height: 100%;
   overflow: hidden;
 }
@@ -345,33 +339,33 @@ li {
   position: absolute;
   right: 50%;
   bottom: 0px;
-  margin-right: -330px;
+  margin-right: -465px;
   height: 100%;
   z-index: 20;
 }
 .banner .banner-code .code {
   position: relative;
-  width: 320px;
+  width: 436px;
   height: 100%;
-  background: url(../images/index-code.png) no-repeat center center;
+  background: url(../images/product-code.png) no-repeat center center;
   text-align: center;
 }
 .banner .banner-code .code-img {
   position: absolute;
-  left: 93px;
-  bottom: 97px;
-  width: 121px;
-  height: 121px;
-  background: url(../images/index-ad-code.png) no-repeat center center;
+  left: 128px;
+  bottom: 218px;
+  width: 178px;
+  height: 178px;
+  background: url(../images/product-ad-code.png) no-repeat center center;
 }
 .banner .banner-ul {
   position: absolute;
   left: 0px;
   bottom: 0px;
-  width: 471px;
+  width: 744px;
 }
 .banner .banner-ul li {
-  width: 157px;
+  width: 248px;
   float: left;
 }
 .banner .banner-ul li img {

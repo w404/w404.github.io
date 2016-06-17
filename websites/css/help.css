@@ -297,6 +297,8 @@ li {
   background: url(../images/banner.jpg) #0b98df no-repeat center;
 }
 .container {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   background-color: #f4f4f4;
   height: auto;
@@ -370,6 +372,7 @@ li {
   position: relative;
   margin-top: 25px;
   color: #6f7b8d;
+  line-height: 44px;
 }
 .container .center .content .detail .comment h4 {
   position: relative;

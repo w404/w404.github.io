@@ -376,12 +376,15 @@ li {
   position: relative;
   font-size: 16px;
   margin-top: 30px;
+  font-weight: 600;
+  display: block;
+  color: #6f7b8d;
+  width: 100%;
 }
 .container .center .content .detail .comment .help-answer {
   width: 770px;
   font-size: 14px;
   height: auto;
-  overflow: hidden;
 }
 .container .center .content .detail .comment .help-answer .key {
   width: 30px;
@@ -390,10 +393,10 @@ li {
   *display: inline;
   zoom: 1;
   margin: 0 auto;
-  overflow: hidden;
   vertical-align: top;
 }
 .container .center .content .detail .comment .help-answer .val {
+  vertical-align: top;
   margin: 0 auto;
   display: inline-block;
   *display: inline;

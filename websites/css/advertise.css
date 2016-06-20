@@ -292,99 +292,170 @@ li {
   background: url(../images/client.png) no-repeat left center;
 }
 .banner {
-  position: relative;
-  height: 685px;
   width: 100%;
-  background: url(../images/product-banner.jpg) #1ec0fa no-repeat center center;
-  overflow: hidden;
+  height: 195px;
+  background: url(../images/banner.jpg) #0b98df no-repeat center center;
 }
-.banner .banner-img {
+.container {
   width: 100%;
+  background-color: #f4f4f4;
+  height: auto;
+}
+.container .center {
+  width: 1180px;
+  margin: 0 auto;
   height: 100%;
-  display: block;
+  background-color: #fff;
+  padding: 45px 0px 0px;
 }
-.banner .banner-cloud {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  height: 179px;
-  width: 100%;
-  display: block;
-  z-index: 30;
-  background: url(../images/product-cloud.png) no-repeat center center;
+.line {
+  border-top: 2px solid #e1e1e1;
+  position: relative;
+  text-align: center;
+  margin-top: 38px;
+  width: 1100px;
+  margin: 0 auto;
 }
-.banner .banner-ad {
+.line.mg-top80 {
+  margin-top: 80px;
+}
+.line .title {
   position: absolute;
+  z-index: 101;
+  background-color: #fff;
+  color: #6f7b8d;
+  width: 152px;
   left: 50%;
-  bottom: 0px;
-  margin-left: -480px;
-  height: 100%;
-  z-index: 20;
+  text-align: center;
+  margin-left: -76px;
+  top: -16px;
+  font-size: 20px;
 }
-.banner .banner-ad .ad-boxs {
+.line h4 {
+  margin-top: 20px;
+  color: #a7b3c4;
+  font-size: 18px;
+}
+.enterprise-culture {
   position: relative;
-  width: 289px;
-  height: 100%;
-  background: url(../images/product-mobile.png) no-repeat center bottom;
+  margin: 70px auto 0px;
+  width: 1100px;
 }
-.banner .banner-ad .ad-boxs .ad-box {
-  position: absolute;
-  left: 21px;
-  bottom: 47px;
-  width: 248px;
+.enterprise-culture .culture-top {
+  height: 378px;
+}
+.enterprise-culture .culture-bottom {
+  margin-top: 4px;
+  height: 275px;
+}
+.enterprise-culture .culture-img {
   height: 100%;
   overflow: hidden;
-}
-.banner .banner-code {
-  position: absolute;
-  right: 50%;
-  bottom: 0px;
-  margin-right: -465px;
-  height: 100%;
-  z-index: 20;
-}
-.banner .banner-code .code {
-  position: relative;
-  width: 436px;
-  height: 100%;
-  background: url(../images/product-code.png) no-repeat center center;
+  float: left;
+  padding-left: 2px;
   text-align: center;
 }
-.banner .banner-code .code-img {
-  position: absolute;
-  left: 128px;
-  bottom: 218px;
-  width: 178px;
-  height: 178px;
-  background: url(../images/product-ad-code.png) no-repeat center center;
+.enterprise-culture .culture-img.img1 {
+  width: 288px;
 }
-.banner .banner-ul {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  width: 744px;
+.enterprise-culture .culture-img.img2 {
+  width: 491px;
 }
-.banner .banner-ul li {
-  width: 248px;
-  float: left;
+.enterprise-culture .culture-img.img3 {
+  width: 317px;
 }
-.banner .banner-ul li img {
+.enterprise-culture .culture-img.img4 {
+  width: 362px;
+}
+.enterprise-culture .culture-img.img5 {
+  width: 369px;
+}
+.enterprise-culture .culture-img.img6 {
+  width: 363px;
+}
+.enterprise-culture .culture-img.last-edge {
+  padding-left: 0px;
+}
+.enterprise-culture .culture-img img {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
   width: 100%;
   height: 100%;
 }
-.product-img {
+.benefits-package {
   position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  width: 100%;
-  height: 765px;
+  margin: 70px auto 0px;
+  width: 1100px;
 }
-.product-img.qualification {
-  background: url(../images/product-2.jpg) #40b95f no-repeat center center;
+.benefits-package .package-main {
+  position: relative;
+  width: 1030px;
+  margin: 0px auto;
 }
-.product-img.reviewed {
-  background: url(../images/product-3.jpg) #f7c94f no-repeat center center;
+.benefits-package .package-main .num1 {
+  width: 42px;
+  height: 26px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  background: url(../images/number.png) 0 0 no-repeat;
 }
-.product-img.account {
-  background: url(../images/product-4.jpg) #347bde no-repeat center center;
+.benefits-package .package-main .num2 {
+  width: 42px;
+  height: 26px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  background: url(../images/number.png) 0 190px;
+}
+.benefits-package .package-main .num3 {
+  width: 42px;
+  height: 26px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  background: url(../images/number.png) 0 138px;
+}
+.benefits-package .package-main .num4 {
+  width: 42px;
+  height: 26px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  background: url(../images/number.png) 0 80px;
+}
+.benefits-package .package-main .num5 {
+  width: 42px;
+  height: 26px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  background: url(../images/number.png) 0 26px;
+}
+.benefits-package .package-main p {
+  margin: -15px auto 10px 55px;
+  font-size: 14px;
+  color: #636060;
+}
+.benefits-package .join-package {
+  position: relative;
+  width: 1030px;
+  margin: 50px auto 0px;
+}
+.benefits-package .join-package p {
+  color: #636060;
+  font-size: 14px;
+  line-height: 24px;
+}
+.benefits-package .join-package a {
+  color: #679cfb;
+  text-decoration: undefined;
+}
+.advertise-bottom-bg {
+  position: relative;
+  margin: 105px auto 0px;
+  width: 1172px;
+  height: 65px;
+  background: url(../images/advertise-bottom-bg.png) no-repeat center center;
 }

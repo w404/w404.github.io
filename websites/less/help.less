@@ -3,20 +3,25 @@
 .banner {
     width: 100%;
     height: 195px;
-    background: url(../images/banner.jpg) #0b98df no-repeat center;
+    background: url(../images/banner.jpg) #0b98df no-repeat center center;
 }
 
 .container {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     background-color: #f4f4f4;
     height: auto;
     .center {
+        position: relative;
         width: 1180px;
         margin: 0 auto;
         height: 100%;
+        overflow: hidden;
         background-color: #fff;
         padding: 0px 0px 30px;
         .nav {
+            float: left;
             width: 295px;
             display: inline-block;
             *display: inline;
@@ -49,9 +54,12 @@
             *display: inline;
             zoom: 1;
             vertical-align: top;
-            margin: 27px 0px 0px 25px;
+            float: right;
+            width: 860px;
+            height: 890px;
+            padding-top: 27px;
             .detail {
-                width: 800px;
+                width: 790px;
                 display: none;
                 &.activated {
                     display: block;
@@ -76,20 +84,29 @@
                         position: relative;
                         font-size: 16px;
                         margin-top: 30px;
+                        width: 100%;
                     }
-                    p {
-                        position: relative;
-                        width: 770px;
+                    .help-answer {
+                        width: 790px;
                         font-size: 14px;
-                        height: auto;
-                        padding-left: 30px;
-                        text-align: justify;
-                        word-wrap: break-word;
-                        word-break: break-all;
-                        span {
-                            position: absolute;
-                            top: 0px;
-                            left: 0px;
+                        margin: 0 auto;
+                        .key {
+                            width: 30px;
+                            display: inline-block;
+                            *display: inline;
+                            zoom: 1;
+                            font-size: 14px;
+                            vertical-align: top;
+                            text-align: left;
+                        }
+                        .val {
+                            vertical-align: top;
+                            font-size: 14px;
+                            display: inline-block;
+                            *display: inline;
+                            zoom: 1;
+                            width: 760px;
+                            text-align: left;
                         }
                     }
                 }

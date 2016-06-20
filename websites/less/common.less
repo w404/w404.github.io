@@ -7,9 +7,9 @@
         display: inline-block;
         *display: inline;
         zoom: 1;
-        width: 220px;
+        width: 207px;
         height: 80px;
-        background: url(../images/logo-top.png) no-repeat;
+        background: url(../images/logo-top.png) no-repeat center center;
         float: left;
         cursor: pointer;
     }
@@ -47,10 +47,11 @@
 }
 
 .footer {
-    position: absolute;
+    position: relative;
     overflow: hidden;
     width: 100%;
     background-color: #3e4244;
+    height: 190px;
     .main {
         position: relative;
         width: 1180px;
@@ -59,48 +60,70 @@
         overflow: hidden;
         *zoom: 1;
         .logo-footer {
-            width: 150px;
-            height: 150px;
+            width: 188px;
+            height: 190px;
             display: inline-block;
             *display: inline;
             zoom: 1;
-            margin: 20px auto;
-            background: url(../images/logo-footer.png) no-repeat;
+            background: url(../images/logo-footer.png) no-repeat 0 38px;
             float: left;
-            line-height: 190px;
         }
         .footer-center {
             display: inline-block;
             *display: inline;
             zoom: 1;
             color: #e2e1e1;
-            margin: 50px 37px 45px 57px;
+            width: 710px;
+            margin-top: 54px;
             ul {
+                width: 100%;
                 li {
                     float: left;
                     list-style: none;
-                    margin-left: 35px;
-                    padding-right: 36px;
-                    border-right: 1px solid #e2e1e1;
+                    width: 136px;
+                    text-align: center;
+                    border-right: 2px solid #e2e1e1;
                     cursor: pointer;
+                    display: block;
+                    &.first-li {
+                        width: 95px;
+                        text-align: left;
+                    }
                     &.last-li {
                         border: none;
+                        margin-right: 0px;
                     }
                     a {
                         text-decoration: none;
                         color: #fff;
+                        font-size: 16px;
                     }
                 }
-                li:first-child {
-                    margin-left: 0;
-                }
             }
-            p {
-                margin-top: 38px;
+            .cp {
+                margin-top: 46px;
+                font-size: 14px;
+                width: 100%;
+                text-align: left;
+                .cp-left {
+                    width: 464px;
+                    text-align: left;
+                    display: inline-block;
+                    *display: inline;
+                    zoom: 1;
+                }
+                .cp-right {
+                    width: 246px;
+                    text-align: left;
+                    display: inline-block;
+                    *display: inline;
+                    zoom: 1;
+                }
             }
         }
         .footer-right {
-            margin: 28px auto;
+            width: 282px;
+            margin: 32px auto;
             overflow: hidden;
             position: absolute;
             top: 0px;
@@ -109,26 +132,27 @@
                 display: inline-block;
                 *display: inline;
                 zoom: 1;
-                text-align: center;
+                text-align: left;
                 .title {
                     color: #e2e1e1;
                     display: block;
+                    margin-top: 4px;
                 }
                 .weixin {
-                    width: 100px;
-                    height: 100px;
+                    width: 172px;
+                    height: 97px;
                     display: inline-block;
                     *display: inline;
                     zoom: 1;
-                    background: url(../images/weixin.png) no-repeat;
+                    background: url(../images/weixin.png) no-repeat 18px 0px;
                 }
                 .download {
-                    width: 100px;
-                    height: 100px;
+                    width: 105px;
+                    height: 97px;
                     display: inline-block;
                     *display: inline;
                     zoom: 1;
-                    background: url(../images/weixin.png) no-repeat;
+                    background: url(../images/client.png) no-repeat left center;
                 }
             }
         }
